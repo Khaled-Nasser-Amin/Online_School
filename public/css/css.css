@@ -1,0 +1,944 @@
+body{
+	height:auto;
+}
+input{
+	margin-bottom: 13px;
+	width: 20rem;
+	background-color: #E0E0E0;
+	border: none;
+	border-radius: 10px;
+	text-indent: 10px
+}
+.header a {
+	text-decoration: none;
+	color: #fff
+}
+.header a:hover {
+	cursor: pointer;
+	color: #34A8E2;
+}
+.container{
+		max-width: 1140px;
+		margin: auto;
+}
+
+.header{
+		background-color: #030421;
+		overflow: hidden;
+		font-size: 25px;
+		height: auto;
+		padding: 25px;
+		font-size: 25px;
+		color: #fff;
+}
+.header .one {
+	float: left;
+	width: 45%;
+	font-weight: bold;
+ }
+ .header .two{
+ 	width: 55%;
+ 	float:right;
+ 	overflow: hidden;
+ }
+ .header .two .icon{
+ 	float: left;
+ }
+ .header .two .icon i{
+ 	font-size: 35px;
+ }
+ .header .two .login{
+ 	float: right;
+	 width:221px;
+}
+.header .two .login a{
+	margin: 0 10px;
+	font-size: 25px;
+}
+
+.header .two .login .dropdown {
+	position: absolute;
+	display: inline-block;
+}
+.header .two .login .dropdown a{margin: 15px 0; font-size: 15px; }
+
+/*--------loged------------------------------------------*/
+.header .loged{
+	overflow: hidden;
+	float: right;
+	width: 70%;
+}
+.loged .pic{
+ 	float: left;
+ 	padding-left: 20px;
+ 	display:block;
+ 	width: 78%;
+ }
+ .loged .pic a{
+ 	margin-left: 60px;
+ 	font-size: 20px;
+ }
+.header .two .loged .image{
+	position: absolute;
+	margin-right: 10px;
+}
+.rounded-circle{
+	width: 45px;
+	height: 45px;}
+.image img:hover{
+	width: 140px;
+	height: 140px;
+	cursor: pointer;
+}
+.header .two .loged .dropdown button{
+	float: right;
+}
+.header .two .loged .dropdown {
+ 	position: absolute;
+ 	display: inline-block;
+ }
+ .header .two .loged .dropdown a{margin: 15px 0; font-size: 15px; }
+ .header .two .loged .dropdown .btn-secondary.dropdown-toggle{
+ 	background-color: rgba(0,0,0,0.2);
+ 	float: right;
+ }
+/*-------------------------------------------navbar ---------------------------------------------*/
+.navbar {margin-top: 20px ;height: 70px;  }
+.navbar a {
+	text-decoration: none;
+	color: #000
+}
+.navbar a:hover {
+	cursor: pointer;
+	color: #34A8E2;
+}
+ul{
+	list-style: none;
+}
+.navbar ul li{
+	float: left;
+	padding: 10px;
+}
+.dropdown-menu{
+	height: auto;
+	background-color: #998552;
+	color: #fff;
+}
+.dropdown-menu a{
+	float: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	width: 100px;
+}
+.dropdown-menu ul ul  {
+	display: none;
+}
+.dropdown-menu ul li:hover > ul{
+	display: block;
+}
+.dropdown-menu i {
+	padding: 0;
+	margin: 0 0 0 10px;
+}
+.dropdown-menu span{
+	display: block;
+	margin: 0 70px 0 0;
+}
+.dropdown-menu .material{
+	display: block;
+	margin: 0;
+}
+.navbar .search-box{
+	background-color: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+}
+.navbar .search-btn{
+	color: #1da1f3;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #2f3640;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+.navbar .search-text{
+	border: none;
+	background:none;
+	outline: none;
+	float: left;
+	color: white;
+	padding: 0;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.search-box form:hover > .search-text{
+	width: 240px;
+	padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+	background: white;
+	border: 1px solid #2f3640;
+}
+/*______________________________________________ Home Page_______________________________________________*/
+
+.img {
+	background:#fff url(../image/st.jpg) no-repeat scroll;
+	-webkit-background-size:cover;
+	height: 500px;
+	background-position: center;
+	background-origin: padding-box;
+	margin: 20px 0 30px 0;
+}
+.img p{
+	color: #fff;
+	font-size: 50px;
+	padding: 30px;
+	margin: 0;}
+.img span {font-weight: bold;}
+.img button {
+	background-color: rgba(0,0,0,0);
+	display: inline-block;
+	border: 5px solid #fff;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+	margin: 100px 250px 250px 500px;
+	position: absolute;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 25px;
+
+ }
+ .img button:hover{	color: #34A8E2;
+ 	border: 5px solid #34A8E2;
+}
+ .welcome {
+ 	overflow: hidden;
+ 	padding: 10px;
+ 	margin: 45px 0;
+ }
+ .welcome .one{
+ 	width: 48%;
+ 	float: left;
+ }
+ .welcome .two {
+ 	width: 48%;
+ 	float: right;
+ }
+ .welcome p{
+ 	font-size: 17px;
+ 	padding: 5px 0;
+ 	margin: 10px 0;
+ }
+ .copy{
+ 	background-color: #030421;
+ 	color: #fff;
+ 	overflow: hidden;
+ 	height: 100px;
+ 	margin: auto;
+ }
+ .copy p{display: inline;margin:10px;margin-bottom: 20px }
+ .copy .one{
+ 	margin: 20px 0 20px 0;
+ 	width: 50%;
+ }
+ .copy .two{margin: 20px 0 0px 0;width: 50%;display: inline;}
+.copy .three{float:right;
+margin: 0;
+padding: 0;
+}
+.bar {
+	background-color: #030421;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+
+}
+.bar p{
+	margin: 2px;
+	padding: 7px
+}
+
+
+/*Login page______________________________________________________________________________*/
+
+.form {
+	text-align: center;
+	overflow: hidden;
+	margin-bottom: 100px
+}
+.form *{
+	display: block;
+	padding: 25px;
+	margin: 30px auto 0px auto;
+}
+
+.form input[name="submit"]{
+	background-color:#030421 ;
+	color: #fff;
+	font-size: 20px;
+	height: auto;
+	text-indent: 0;
+
+}
+.form label{
+	margin: 0;
+}
+.form a[name="CREATE"]{
+	background-color: #34A8E2;
+	color: #fff;
+	width: 230px;
+	height: auto;
+	text-indent: 0;
+}
+
+/* --------------------------------------- sign up as a student*/
+
+.formstudent{
+	margin: 50px;
+
+}
+.formstudent small{
+    display: block;
+    width:300px;
+}
+.formstudent .one, .formstudent .two {
+		display:inline-block;
+		width: 35%;
+		margin-left: 50px;}
+.formstudent *{
+	padding: 3px;
+}
+.formstudent label{
+	display: block;
+	margin: 20px 0 5px 7px;
+	padding: 0;
+}
+.formstudent i{
+	padding: 0;
+	margin: 0;
+}
+.formstudent .two{
+		float: right;
+		height: auto;
+}
+
+
+.formstudent .three{margin: 100px}
+.formstudent .three input{
+	display: block;
+	margin: auto;
+	background-color: #34A8E2;
+	color: #fff;
+	width: 350px;
+	border-radius: 25px;
+	font-size: 20px;
+	border:none;
+	height: 60px;
+}
+.formstudent select{
+	border: 1px solid #999;
+	border-radius: 20px;
+	width: auto;
+	height: 35px;
+	margin-bottom: 7px;
+}
+
+
+/*----------------------sign up 3 users --------*/
+
+.signup{
+	overflow: hidden;
+	padding: 20px
+}
+.signup a{
+	text-decoration: none;	cursor: pointer;
+
+}
+.signup button{
+	display: block;
+	width: 350px;
+	margin: 80px auto 80px auto;
+	border: none;
+	border-radius: 25px;
+	background-color: #34A8E2;
+	color: #fff;
+	padding: 10px;
+	font-size: 30px;
+}
+/*-------------------------------------- contact - Support----*/
+.contact{
+	text-align: center;
+	overflow: hidden;
+	margin: 60px 0 90px 0;
+}
+.contact *{
+	font-size: 20px;
+	margin: 30px auto 30px auto;
+	padding: auto;
+	width: 60%;
+}
+.contact h1{
+	font-size: 30px;
+}
+.contactform{
+	background-color:  #030421;
+	color: #fff;
+	overflow: hidden;
+	padding: 70px;
+
+}
+.contactform *{
+	border-radius: 25px;
+	text-indent: 15px;
+	border: none;
+
+}
+
+.contactform label{
+	display: block;
+	margin:  10px 0 4px 0;
+}
+.contactform input{
+	width: 300px;
+	height: 40px;
+	background-color: #EBEBEB;
+
+}
+.contactform textarea{
+	width: 300px;
+	height: 200px;
+	background-color: #EBEBEB;
+}
+.contactform button{
+	width: 100px;
+	background-color: #34A8E2;
+	text-indent: 0;
+	height: 40px;
+	margin: 20px 0;
+}
+
+/*------------------------------about us-------------------------------*/
+
+.aboutus{
+	overflow: hidden;
+	margin: 120px 0;
+}
+.aboutus h1{margin-bottom: 40px; text-align: center; }
+.aboutus p{
+	width: 40%;
+	display: inline;
+	margin: 40px auto auto auto ;
+	font-size: 18px;
+
+}
+
+.aboutus p+p{
+	float: right;
+}
+.aboutus h1+ p{
+	float: left
+}
+
+.ourmission {
+	overflow: hidden;
+	margin: 120px 0;
+	text-align: center;
+
+
+}
+.ourmission p{
+	width: 50%;
+	margin: 40px auto auto auto;
+	font-size: 18px;
+}
+/* -----------------------------------  attendance information -------------------------------*/
+.teacherInfo , .studentInfo{
+	margin: 50px auto 50px auto;
+	overflow: hidden;
+	min-height: 400px;
+}
+
+.teacherInfo h1 , .studentInfo h1 ,.user h1{
+	display: block;
+	text-align: center;
+	margin: 20px 0 50px 0;
+}
+.teacherInfo ul, .studentInfo ul{
+	list-style-type: none;
+	display: block;
+
+}
+.teacherInfo li , .studentInfo li{
+	margin:15px auto;
+font-weight: bold;
+}
+
+/* -----------------------------------  attendance table -------------------------------*/
+
+
+.table{
+	margin: 70px 0;
+	overflow: hidden;
+	text-align: center;
+
+}
+.table table{
+	width: 100%;
+	padding: 5px
+}
+.table*{
+	margin: auto;
+}
+.table th{
+	border: 1px solid #999;
+}
+.table td{
+	border: 1px solid #999;
+
+}
+
+/*------------------------assignment.php  -----------------------------*/
+.assig{
+	margin-top:30px;
+}
+.teacherInfo .assignment ,.studentInfo .assignment{
+	width: 20%;
+	height: auto;
+	margin: 60px  15px 15px 15px;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 20px;
+	border: 1px solid #999;
+	overflow: hidden;
+}
+.teacherInfo .assignment i, .studentInfo .assignment i{
+	font-size: 150px;
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+.studentInfo .assignment a>i{
+	border-left: 1px solid #9992;
+	float: right;
+}
+.teacherInfo .assignment a>i, .studentInfo .assignment a>i{
+	font-size: 30px;
+	margin: auto ;
+}
+.studentInfo .assignment hr{
+	margin: 8px;
+}
+.studentInfo .assignment span{
+	font-size: 20px;
+	margin:5px;
+}
+.teacherInfo .assi h1+button,.teacherInfo .assi button+input{
+	display: block;
+	float: right;
+	width: 120px;
+	background-color: #007bff;
+	border: none;
+	color: #fff;
+	border-radius: 5px
+}
+.teacherInfo .assi button+input{
+	height: 40px;
+}
+.teacherInfo .modal-body form{
+	height: auto;
+}
+.teacherInfo .modal-body .k {
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #999;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 25px;
+	width: 150px;
+	float: left;
+}
+.teacherInfo .modal-body span{
+	float: right;
+	margin-top: 10px;
+}
+
+/*------------------------Lessons.php  -----------------------------*/
+
+.teacherInfo .lessons ,.studentInfo .lessons{
+	width: 20%;
+	height: auto;
+	margin: 20px  15px 15px 15px;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 20px;
+	border: 1px solid #999;
+}
+.teacherInfo .lessons i,.studentInfo .lessons i{
+	font-size: 30px;
+}
+.teacherInfo .lessons hr, .studentInfo .lessons hr{
+	margin: 10px 0;
+}
+.teacherInfo .lessons span+a, .studentInfo .lessons span+a{
+	font-size: 30px;
+	float: right;
+	margin: 0px 5px 0px 0px;
+	border-left: 2px solid #9992;
+	padding-left: 5px;
+
+}
+.teacherInfo .lessons .fa-file-pdf .studentInfo .lessons .fa-file-pdf{
+	font-size: 250px;
+}
+.teacherInfo .lessons .fn , .studentInfo .lessons .fn{
+	font-size: 25px;
+	margin-left: auto;
+	margin-left: 15px;
+
+}
+/*------------------------------------edit- profile-------------------*/
+.edit_profile{
+	margin: 50px auto;
+	padding: 20px;
+	min-height: 450px;
+}
+.edit_profile .sub{
+	width: 45%;
+	display: inline-block;
+
+
+}
+.edit_profile .sub label{
+	float: left;
+	margin-left: 25px;
+
+}
+.edit_profile .sub input{
+	float: right;
+}
+.edit_profile h1{
+	text-align: center;
+	margin: 20px auto 60px auto;
+}
+.edit_profile input[name="submit"]{
+	text-align: center;
+	margin: 60px auto;
+	width: 120px;
+	background-color: #34A8E2;
+	color: #fff;
+	border-radius: 5px;
+}
+/*----------------------- add subject page ---------------------------*/
+.AddLanguagePage{
+	width: 100%;
+}
+.AddLanguagePage button{
+	display: block;
+	margin: 250px auto 150px;
+
+}
+
+.add_language .btn_AddMore{
+	float: right;
+	margin: 15px 15px 0 0 ;
+}
+
+.add_language .btn_submit,.add_subject .btn_submit{
+	width: 100%;
+	margin: 0;
+}
+/*-----------------------  choose subject  page ---------------------------*/
+
+.add_subject input[type="radio"],.add_subject input[type="checkbox"]{
+	width: 25px;
+	margin: 25px 0 25px 25px ;
+}
+
+/*---- profile page------*/
+.card-box {
+  padding: 20px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25), 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-clip: padding-box;
+  margin: 40px 0;
+  background-color: #fff;
+}
+
+.profile_image{
+	width: 180px;
+	height: 180px;
+	margin-bottom:10px;
+}
+/***---------edit page-----------------*/
+.edit_list{
+
+	width: 70%
+}
+.edit_list li {
+	margin: 10px 5px;
+	font-size: 16px;
+	display: inline-block;
+
+}
+
+.upload_image{
+	display: block;
+	margin: auto;
+	width: 350px;
+	height: 350px;
+	 border-radius: 10%;
+
+}
+
+.change_subject *{
+	margin: 15px auto;
+	text-align: center;
+}
+.attend_btn a{
+	background-color: rgba(0,0,0,0);
+	display: inline-block;
+	border: 1px solid #999992;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 25px;
+	width: 50px;
+}
+.grade_btn input{
+	width: 90px;
+	text-indent:none;
+	margin-top: 5px;
+	padding: 0;
+}
+.date_of_grade {
+	width: 325px;
+	background-color: #9992;
+	display: inline-block;
+	height: 32px;
+	padding: 0;
+	border-radius: 5px;
+}
+.date_of_grade input{
+	border-radius: none;
+	text-indent:none;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+}
+
+/*--page t_attendance-*/
+.attendance_btn *
+{
+	margin: 0px;
+	padding: 0px;
+	display:inline;
+	width: 40px;
+	text-align: center;
+}
+/*--page Edit-*/
+.reg_control{
+	display: block;
+	margin-top: 200px
+}
+.reg_control input{
+	display: block;
+	margin: auto;
+	width: auto;
+}
+
+/*------users.php-----*/
+.user{
+	min-height: 650px;
+}
+.user h1{
+	margin: 80px 0;
+}
+.user .table{
+	margin: 80px 0  	;
+}
+.user .table th{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/*parent page header loged */
+
+.select_child a
+{
+	width: 220px;
+}
+.select_child img{
+	margin-right: 15px;
+}
+
+/* forget password*/
+
+.forget_password{
+	min-height: 500px;
+	width: 50%;
+	overflow: hidden;
+	display: block;
+	margin: 150px auto 0 ;
+
+}
+.forget_password .card-body{
+	width: 100% ;
+}
+.forget_password .w-75{
+	width: 100% !important;
+	padding: 20px;
+}
+.forget_password input{
+	margin:30px 0;
+}
+
+/*********		search page	********/
+.search_page{
+	min-height: 450px;
+	margin: 60px 0;
+}
+.search_page .card-body,.home .card-body{
+	min-height: 400px;
+}
+.search_page .text-center {
+    text-align: left !important;
+
+}
+.search_page .alert img{
+	margin-right:20px;
+	width: 70px;
+	height: 70px;
+
+}
+.search_page .alert a{
+	text-decoration: none;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/************** events page ********************/
+.event .add_photo{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+}
+.event .add_description{
+	width: 100%;
+	display: block;
+	overflow: hidden;
+}
+.event .add_description input{
+	background-color: #2f3640;
+	width: 250px;
+	margin:20px 10px;
+	color: white;
+}
+.event .add_description textarea{
+	width: 100%;
+	border-radius: 20px;
+	text-indent: 10px;
+	border: 2px solid #2f3640;
+	min-height: 100px;
+	max-height: 250px;
+}
+.event .add_description label{
+	width: 100px;
+}
+.event .event_card{
+	margin: 30px 50px 30px 0;
+	display: inline-block;
+	max-height: 760px;
+	min-height: 550px;
+	overflow: hidden;
+}
+.event .event_card img{
+	max-height: 250px;
+}
+.event .event_card .description
+{
+	max-height: 100px;
+	min-height: 50px;
+	overflow: hidden;
+}
+/************************* teacher attendance*********/
+.t_attendance .nav-tabs .nav-link{
+	width: 50%;
+	display: inline-block;
+}
+.t_attendance .qr_code{
+	display: block;
+	margin: auto;
+	width: 30%;
+}
+
+/*===========================home page =====================*/
+.home .card-header-tabs{
+	display: inline;
+	float: left;
+}
+.home{
+	min-height: 650px;
+	margin: 60px 0;
+}
+.home .card-header .upload_bttn{
+	float: right;
+	width: auto;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.home .card-header .upload_bttn button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 12px;
+}
+.home .posts .write_post textarea{
+	width: 100%;
+	min-height: 250px;
+	border:none;
+	background-color: #2f3640;
+	color: #fff;
+	margin-top: 30px;
+}
+.home .posts .modal-body{
+	background-color: #2f3640;
+	color: #fff
+}
+.home .posts .k{
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #999;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 25px;
+	width: 150px;
+	float: left;
+	color: #fff;
+}
+.home .posts .post_image{
+	overflow: hidden;
+	width: 100%;
+	max-height: 400px;
+}
+.home .posts .post_image img{
+	width: 100%;
+	height: 350px;
+}
