@@ -28,7 +28,7 @@ class SendEmailToVerifyAccount extends Controller
                 'success' => 'Please Check your Inbox to verify Your Account.',
                 'email' => $email]);
         } else {
-            return redirect()->route($this->redirect_after_verified())->with(['message' => 'You already verified Your Account before']);
+            return redirect()->route($this->redirect_after_verified())->with(['danger' => 'You already verified Your Account before']);
         }
     }
     public function Check_Verified_Email(){
@@ -39,7 +39,7 @@ class SendEmailToVerifyAccount extends Controller
                 'email' => $user->email]);
         }
         else{
-            return redirect()->route($this->redirect_after_verified())->with(['message' => 'You already verified Your Account before']);
+            return redirect()->route($this->redirect_after_verified())->with(['danger' => 'You already verified Your Account before']);
         }
     }
 

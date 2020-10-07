@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{URL::asset('css/bootstrapcss.css')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/font/font/css/all.min.css')}}">
     <script src="{{URL::asset('js/slim.js')}}" ></script>

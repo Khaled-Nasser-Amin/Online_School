@@ -27,4 +27,15 @@ class Parents extends Authenticatable
     public function school(){
         return $this->belongsTo('App\Models\School','school_id','ID');
     }
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function($user) { // before delete() method call this
+            $user->student()->dissociate()->save();
+            // do the rest of the cleanup...
+        });
+    }
+    public function events(){
+        return $this->hasManyThrough('App\Models\Events','App\Models\School','ID','school_id','school_id','ID');
+    }
 }

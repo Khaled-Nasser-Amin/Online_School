@@ -3,8 +3,8 @@
     <div class="header">
         <div class="container">
             <div class="one">
-                <a href="{{route('home')}}">Smart School</a>
-                <a href="{{route('home')}}"><i class="fas fa-school"></i></a>
+                <a href="{{$user->getTable() == 'school' ? route('home_logged'):route('profile',['id'=>$user->school_id,'type'=>'school'])}}">{{$user->getTable() == 'school' ? 'Online Schoo' : $user->school_name}}l</a>
+                <a href="{{$user->getTable() == 'school' ? route('home_logged'):route('profile',['id'=>$user->school_id,'type'=>'school'])}}"><i class="fas fa-school"></i></a>
             </div>
             <div class="two">
                 <div class="icon">
@@ -16,9 +16,9 @@
                 <div class="loged">
                     <div class="pic">
                         <div class="image">
-                            <img src="{{asset('image/'.$user->image)}}" alt='...' class='rounded-circle'>
+                            <img src="{{asset('/image/'.$user->image)}}" alt='...' class='rounded-circle'>
                         </div>
-                        <a href="">
+                        <a href="{{route('profile',['id'=>$user->ID,'type'=>$user->getTable()])}}">
                             @if (isset($user->name))
                                 {{$user->name}}
                             @else
@@ -118,16 +118,13 @@
                         </div>
                     </li>
                     @endif
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="{{route('home_logged')}}">Home</a></li>
+                    <li><a href="{{route('ViewEvents')}}">Events</a></li>
                 </ul>
                 <div class="search-box">
-                    <form method="get" action="search_result.php" name="test">
-                        <input type="text" name="name" placeholder=" Type here" class="search-text" id="search_text" onchange="search()">
-                        <a href="" class="search-btn" id="bttn"><i class='fas fa-search'></i></a>
+                    <form method="get" action="{{route('SearchResult')}}" name="test" id="form">
+                        <input type="text" name="key" placeholder=" Type here" class="search-text" id="search_text" onchange="search()">
+                        <button class="search-btn" id="bttn"><i class='fas fa-search'></i></button>
                     </form>
 
                 </div>
@@ -137,17 +134,11 @@
         <script>
             function search(){
                 var btn= document.getElementById('bttn');
-                var txt= document.getElementById('search_text');
-                btn.href="search_result.php?name="+txt.value;
-            }
-            // enter key to submit serch icon
-            document.onkeydown=function(evt){
-                var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
-                if(keyCode == 13)
-                {
-                    //your function call here
-                    document.test.submit();
-                }
+                var form=document.getElementById('form');
+                btn.addEventListener('click',function (){
+                    form.submit();
+                });
+
             }
         </script>
 

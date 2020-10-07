@@ -3,7 +3,7 @@
 <div class="header">
     <div class="container">
         <div class="one">
-            <a href="/Home">Smart School</a>
+            <a href="/Home">Online School</a>
             <a href="/Home"><i class="fas fa-school"></i></a>
         </div>
 

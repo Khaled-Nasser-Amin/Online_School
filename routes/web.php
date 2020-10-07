@@ -64,22 +64,34 @@ Route::group(['middleware' => ['checkVerified']],function() {
 
 ############################   Common files after logged  ####################################
 Route::group(['middleware' => ['checkVerified','auth:school,parents,student,teacher','checkSubject']],function(){
-    Route::get('/homee', function (){
-        return view('commonLogged.homeLogged');
-    })->name('home_logged');
+    Route::get('/home','CommonLoggedController@ViewHome')->name('home_logged');
+    Route::get('/Profile/{type}/{id}','CommonLoggedController@ViewProfile')->name('profile');
+    Route::get('/Search','CommonLoggedController@SearchResult')->name('SearchResult');
+    Route::get('/Events','CommonLoggedController@ViewEvents')->name('ViewEvents');
+    Route::get('/Events/DeleteEvent/{name}/{id}/{image}','School_Operations@DeleteEvent')->name('DeleteEvent');
+    Route::post('/Events/SetEvent','School_Operations@SetEvent')->name('SetEvent');
+    Route::post('/home/SetPost','CommonLoggedController@SetPost')->name('SetPost');
+    Route::get('/home/DeletePost/{number}/{id}/{type}','CommonLoggedController@DeletePost')->name('DeletePost');
+
 
     /*^^^^^^^^^^^^^^^^^^ Edit ^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-    Route::get('/Edit','EditController@ViewEdit')->name('Edit');
-    Route::post('/Edit/UploadImage','EditController@EditImage')->name('EditImage');
-    Route::post('/Edit/ChangeName','EditController@EditName')->name('EditName');
-    Route::post('/Edit/ChangePassword','EditController@ChangePassword')->name('ChangePassword');
-    Route::post('/Edit/ChangeEmail','EditController@ChangeEmail')->name('ChangeEmail');
-    Route::get('/Edit/ConfirmEmail','EditController@ConfirmEmail')->name('ConfirmEmail');
-    Route::post('/Edit/ChangePhone','EditController@ChangePhone')->name('ChangePhone');
-    Route::post('/Edit/BIO','EditController@BIO')->name('BIO');
-    Route::post('/Edit/ChangeLocalAddress','EditController@ChangeLocalAddress')->name('ChangeLocalAddress');
-    Route::post('/Edit/ChangeBirthDay','EditController@ChangeBirthDay')->name('ChangeBirthDay');
-    Route::post('/Edit/addNewMaterial','EditController@addMaterial')->name('addMaterial');
+    Route::group(['prefix' => 'Edit'],function(){
+        Route::get('/','EditController@ViewEdit')->name('Edit');
+        Route::post('/UploadImage','EditController@EditImage')->name('EditImage');
+        Route::post('/ChangeName','EditController@EditName')->name('EditName');
+        Route::post('/ChangePassword','EditController@ChangePassword')->name('ChangePassword');
+        Route::post('/ChangeEmail','EditController@ChangeEmail')->name('ChangeEmail');
+        Route::get('/ConfirmEmail','EditController@ConfirmEmail')->name('ConfirmEmail');
+        Route::post('/ChangePhone','EditController@ChangePhone')->name('ChangePhone');
+        Route::post('/BIO','EditController@BIO')->name('BIO');
+        Route::post('/ChangeLocalAddress','EditController@ChangeLocalAddress')->name('ChangeLocalAddress');
+        Route::post('/ChangeBirthDay','EditController@ChangeBirthDay')->name('ChangeBirthDay');
+        Route::post('/addNewMaterial','EditController@addMaterial')->name('addMaterial');
+        Route::post('/DeleteAccount','EditController@DeleteAccount')->name('DeleteAccount');
+        Route::post('/AddChild','EditController@AddChild')->name('AddChild');
+        Route::post('/ChangeGrade','EditController@ChangeGrade')->name('ChangeGrade');
+        Route::post('/ChangeSubject','EditController@ChangeSubject')->name('ChangeSubject');
+    });
     /*^^^^^^^^^^^^^^^^^^  End edit  ^^^^^^^^^^^^^^^*/
 });
 

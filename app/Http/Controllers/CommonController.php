@@ -54,15 +54,15 @@ class CommonController extends Controller
             return redirect('/');
         }
         elseif(Auth::guard('student')->attempt($credential,1)){
-            return redirect()->intended('/homee');
+            return redirect()->intended('/home');
         }
         elseif(Auth::guard('parents')->attempt($credential,1)){
-            return redirect()->intended('/homee');
+            return redirect()->intended('/home');
         }
         elseif(Auth::guard('teacher')->attempt($credential,1)){
-            return redirect()->intended('/homee');
+            return redirect()->intended('/home');
         }else{
-            return redirect()->back()->with(['message' => 'This Credential does not match in our records']);
+            return redirect()->back()->with(['danger' => 'This Credential does not match in our records']);
         }
     }
 

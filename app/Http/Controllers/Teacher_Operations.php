@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TeacherRequests;
 use App\Models\Student;
+use App\Models\School;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Teacher;
@@ -61,10 +62,10 @@ class Teacher_Operations extends Controller
         $user=auth()->guard('teacher')->user();
         $subject_name=filter_var($request->input('name'),513);
         Teacher::where('ID',$user->ID)->update(['subject' => $subject_name]);
-        $students=Student::select('ID','subject')->Where('school_id',$user->school->ID)->get()->toArray();
+        $students=Student::select('ID','subject','grade')->Where('school_id',$user->school->ID)->get()->toArray();
         foreach ($students as $student){
-            if(in_array($subject_name,explode('/',$student['subject']))){
-                $user->student()->syncWithoutDetaching($student['ID'],['subject' => $subject_name]);
+            if(in_array($subject_name,explode('/',$student['subject'])) && $student['grade'] == $user->grade){
+                $user->student()->syncWithoutDetaching([$student['ID'] => ['subject' => $subject_name]]);
             }
         }
         return redirect('/homee');

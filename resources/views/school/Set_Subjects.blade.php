@@ -6,8 +6,8 @@
 <!-- modal -->
 <div class="AddLanguagePage">
     <div class="container">
-        @if (session()->has('message'))
-            <dev class="alert alert-danger" style="margin: 0 auto;text-align: center;display: block">{{session()->get('message')}}</dev>
+        @if (session()->has('danger'))
+            <dev class="alert alert-danger" style="margin: 0 auto;text-align: center;display: block">{{session()->get('danger')}}</dev>
         @endif
         @for ($i = 0; $i < count($errors->all()); $i++)
                 @error('name.'. $i)

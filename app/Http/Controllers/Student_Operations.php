@@ -69,10 +69,10 @@ class Student_Operations extends Controller
                 $user=Auth::guard('student')->user();
                 $str=implode('/',$subjects);
                 Student::where('ID',$user->ID)->update(['subject' => $str]);
-                $teachers=Teacher::select('ID','subject')->where('school_id',$user->school->ID)->get();
+                $teachers=Teacher::select('ID','subject','grade')->where('school_id',$user->school->ID)->get();
                 foreach ($teachers as $teacher){
-                    if(in_array($teacher['subject'],$subjects)){
-                        $user->teacher()->syncWithoutDetaching($teacher['ID'],['subject' => $teacher['subject']]);
+                    if(in_array($teacher['subject'],$subjects) && $teacher['grade'] == $user->grade){
+                        $user->teacher()->syncWithoutDetaching([$teacher['ID'] => ['subject' => $teacher['subject']]]);
                     }
                 }
 

@@ -7,8 +7,8 @@
             <p>Login</p>
         </div>
     </div>
-    @if (session()->has('message'))
-        <div class="alert alert-danger" style="text-align: center">{{session()->get('message')}}</div>
+    @if (session()->has('danger'))
+        <div class="alert alert-danger" style="text-align: center">{{session()->get('danger')}}</div>
     @endif
     <div class="form">
         <div class="container">

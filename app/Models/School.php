@@ -33,7 +33,13 @@ class School extends Authenticatable
         return $this->hasMany('App\Models\Teacher','school_id','ID');
     }
     public function parents(){
-        return $this->hasMany('App\Modles\Parents','school_id','ID');
+        return $this->hasMany('App\Models\Parents','school_id','ID');
+    }
+    public function events(){
+        return $this->hasMany('App\Models\Events','school_id','ID');
+    }
+    public function posts(){
+        return $this->hasMany('App\Models\Posts','school_id','ID');
     }
 
 }

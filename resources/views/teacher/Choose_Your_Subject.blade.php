@@ -2,8 +2,8 @@
 @section('navbar')
 @stop
 @section('content')
-    @if (session()->has('message'))
-        <dev class="alert alert-danger" style="margin: 0 auto;text-align: center;display: block">{{session()->get('message')}}</dev>
+    @if (session()->has('danger'))
+        <dev class="alert alert-danger" style="margin: 0 auto;text-align: center;display: block">{{session()->get('danger')}}</dev>
     @endif
     @for ($i = 0; $i < count($errors->all()); $i++)
         @error('name.'. $i)
@@ -31,13 +31,10 @@
                 <div class="add_subject">
                     <form method="POST" action="{{route('Choose_Your_Subject')}}">
                         @csrf
-                        @php
-                            $subjects=$user->school->subject_name;
-                            foreach (explode('/',$subjects) as $subject){
-                                echo '<input type="radio" name="name" id='.$subject.' value="'.$subject.'">';
-                                echo '<label>'.$subject.'</label>';
-                            }
-                        @endphp
+                        @foreach (explode('/',$user->school->subject_name) as $subject)
+                            <input type="radio" name="name" id='{{$subject}}' value='{{$subject}}'>
+                            <label>{{$subject}}</label>
+                        @endforeach
                         <input type="Submit" name="submit" value="Submit" id="submit" class="btn btn-primary btn_submit" />
                     </form>
                 </div>
